@@ -1,21 +1,35 @@
 /**
  * A BoxTopRacer is a Racer that can jump over hurdles of any width.
  * 
- * @author <...>
+ * @author <John Carrafiel>
  * @version <...>
  *
  */
+import edu.fcps.karel2.Display;
+import edu.fcps.karel2.Robot;
+
 public class BoxTopRacer extends Racer {
 	
-	//TODO Subclasses do not inherit any constructors from their superclass
-	//Consequently, you will need to provide a compatible constructor
-	
-	/**
-	 * Re-implement the method to allow for jumping hurdles of any width
-	 */
+	public BoxTopRacer(int y) {
+   
+   super(y);
+   }
+
 	@Override
 	public void jumpRight() {
-		
+   
+   if (!rightIsClear()&&frontIsClear()){
+      move();
+      }
+      else if(rightIsClear()&&frontIsClear()){
+      turnRight();
+      move();
+      }
+      else if(!rightIsClear()&&!frontIsClear()){
+      turnLeft();
+      }
+      
 	}
 
 }
+

@@ -10,14 +10,7 @@
       {
          while(!arg.nextToABeeper())
          {
-            if(arg.frontIsClear())
-            {
-               arg.move();
-            }
-            else
-            {
-               arg.jumpRight();
-            }
+         arg.jumpRight();
          }
       }
        public static void main(String[] args) 
@@ -35,7 +28,7 @@
          }
          else if(type.equals("SteepleChaseRacer"))
          {
-            race( new SteepleChaseRacer(1) );
+            race( new SteepleChaseRacer(1));
          }
          else if(type.equals("BoxTopRacer"))
          {
