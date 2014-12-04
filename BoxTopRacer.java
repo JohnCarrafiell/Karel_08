@@ -25,6 +25,14 @@ public class BoxTopRacer extends Racer {
       turnRight();
       move();
       }
+      else if(rightIsClear()&&!frontIsClear()){
+      turnRight();
+      move();
+      }
+      else if(!rightIsClear()&&!frontIsClear()&&!leftIsClear()){
+      turnAround();
+      move();
+      }
       else if(!rightIsClear()&&!frontIsClear()){
       turnLeft();
       }
